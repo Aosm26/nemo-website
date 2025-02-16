@@ -18,4 +18,22 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  position: relative; /* Arka planın sabit kalabilmesi için */
+}
+
+/* Arka plan resmini ekliyoruz */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/logo.png'); /* public klasöründe yer alan logo.png dosyasını kullanıyoruz */
+  background-size: cover; /* Resmi ekranı kaplayacak şekilde ayarlıyoruz */
+  background-position: center; /* Resmin ortada durmasını sağlıyoruz */
+  background-repeat: no-repeat; /* Resmin tekrarlanmaması için */
+  background-attachment: fixed; /* Arka planın sabit olmasını sağlıyoruz */
+  opacity: 0.3; /* Arka planın %30 opaklıkla görünmesini sağlıyoruz */
+  z-index: -1; /* Arka planın içerikten arka planda kalmasını sağlıyoruz */
 }
