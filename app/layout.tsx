@@ -1,6 +1,6 @@
 import "./globals.css";
 import Image from "next/image";
-import Link from "next/link"; // ✅ Link bileşenini ekledik
+import Link from "next/link";
 
 export const metadata = {
   title: "Nemo - Learn Languages",
@@ -20,12 +20,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Link>
             <span className="text-2xl font-bold text-accent">Nemo</span>
           </div>
-          <ul className="flex space-x-6">
-            <li><Link href="/" className="text-accent hover:text-secondary">Home</Link></li>
-            <li><Link href="#features" className="text-accent hover:text-secondary">Features</Link></li>
-            <li><Link href="#about" className="text-accent hover:text-secondary">About</Link></li>
-            <li><Link href="#contact" className="text-accent hover:text-secondary">Contact</Link></li>
-          </ul>
         </nav>
 
         {/* Main Content */}
